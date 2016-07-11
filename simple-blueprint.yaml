@@ -46,8 +46,6 @@ node_templates:
           inputs:
             params:
               detach: true
-              volumes: 
-                - '/etc/clearwater/local_config'
               stdin_open: true
               tty: true
         start:
@@ -56,7 +54,7 @@ node_templates:
             params:
               network_mode: host
               binds: 
-                - /home/cloud/local_config:/etc/clearwater/local_config'
+                - /home/cloud/local_config:/etc/clearwater/local_config
     relationships:
       - type: cloudify.relationships.contained_in
         target: host
