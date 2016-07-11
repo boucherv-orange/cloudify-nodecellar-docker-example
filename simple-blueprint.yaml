@@ -55,7 +55,7 @@ node_templates:
               binds: 
                 - /home/cloud/local_config:/etc/clearwater/local_config'
             processes_to_wait_for:
-              - /bin/sh
+              - /bin/bash
     relationships:
       - type: cloudify.relationships.contained_in
         target: host
