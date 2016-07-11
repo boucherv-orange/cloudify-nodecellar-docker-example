@@ -48,7 +48,7 @@ node_templates:
               detach: true
               stdin_open: true
               tty: true
-              command: service clearwater-etcd restart && bash
+              command: service clearwater-etcd restart && sh
         start:
           implementation: docker.docker_plugin.tasks.start
           inputs:
