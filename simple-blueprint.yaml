@@ -44,11 +44,11 @@ node_templates:
         create:
           implementation: docker.docker_plugin.tasks.create_container
           inputs:
-            params:
-              network_mode: host
         start:
           implementation: docker.docker_plugin.tasks.start
           inputs:
+            params:
+              network_mode: host
             processes_to_wait_for:
               - /bin/sh
     relationships:
