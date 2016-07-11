@@ -48,6 +48,8 @@ node_templates:
               detach: true
               volumes: 
                 - '/etc/clearwater/local_config'
+              stdin_open: true
+              tty: true
         start:
           implementation: docker.docker_plugin.tasks.start
           inputs:
