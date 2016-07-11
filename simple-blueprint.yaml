@@ -36,11 +36,9 @@ node_templates:
   clearwater_mgmt_container:
     type: cloudify.docker.Container
     properties:
-      name:
-        default: clearwater-management
+      name: clearwater-management
       image:
-        default:
-          repository: boucherv/clearwater-management
+        repository: boucherv/clearwater-management
     interfaces:
       cloudify.interfaces.lifecycle:
         create:
