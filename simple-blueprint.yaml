@@ -45,6 +45,7 @@ node_templates:
           implementation: docker.docker_plugin.tasks.create_container
           inputs:
             params:
+              detach: true
               volumes: 
                 - '/etc/clearwater/local_config'
         start:
@@ -54,8 +55,6 @@ node_templates:
               network_mode: host
               binds: 
                 - /home/cloud/local_config:/etc/clearwater/local_config'
-            processes_to_wait_for:
-              - /bin/bash
     relationships:
       - type: cloudify.relationships.contained_in
         target: host
